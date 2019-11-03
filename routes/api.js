@@ -44,11 +44,11 @@ router.post('/doUpload', async (ctx)=>{
                 start =start +search.length
                 let result =urlencode.encode(  file_path.substring(start) );//截取字符串
 
-                addobj.path =  'download?file=' +result + '&root=' + conf.currentRoot 
+                //addobj.path =  'download?file=' +result + '&root=' + conf.currentRoot 
               // addobj.path =  conf.host +'/download?file=' +result + '&root=' + conf.currentRoot 
                // addobj.path = conf.host +'/upload/' +result
                
-               //addobj.path = 'upload/' +result
+               addobj.path = 'upload/' +result
 
                // let extname= path.extname( file_path).toLowerCase()
                 // if (extname !='.pdf' && item.type.indexOf('image')<0 ){
@@ -95,8 +95,8 @@ router.post('/doUpload', async (ctx)=>{
            // addobj.path = conf.host +'/download?file=' +result + '&root=' + conf.currentRoot 
 
             //addobj.path = conf.host +'/upload/' +result
-            //addobj.path = 'upload/' +result
-            addobj.path =  'download?file=' +result + '&root=' + conf.currentRoot 
+            addobj.path = 'upload/' +result
+            //addobj.path =  'download?file=' +result + '&root=' + conf.currentRoot 
             
             //let extname= path.extname( file_path).toLowerCase()
 
